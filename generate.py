@@ -3,7 +3,7 @@ import os
 import torchvision.utils
 import torch
 import model
-
+import sys
 device = "cuda"
 exp_dir = "fake"
 
@@ -32,6 +32,7 @@ def main() -> None:
             torchvision.utils.save_image(image, os.path.join(exp_dir, f"{index:03d}.png"))
             print(f"The {index + 1:03d} image is being created using the model...")
 
-
+    os.makedirs('submission',exist_ok=True)
+    os.system("zip -r submission/20229006.zip fake") 
 if __name__ == "__main__":
     main()
