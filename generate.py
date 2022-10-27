@@ -5,7 +5,7 @@ import torch
 import model
 import sys
 device = "cuda"
-exp_dir = "fake"
+exp_dir = "20229006"
 
 generator = model.Generator().to(device)
 
@@ -33,6 +33,6 @@ def main() -> None:
             print(f"The {index + 1:03d} image is being created using the model...")
 
     os.makedirs('submission',exist_ok=True)
-    os.system("zip -r submission/20229006.zip fake") 
+    os.system("zip -r submission/20229006.zip 20229006") 
 if __name__ == "__main__":
     main()
