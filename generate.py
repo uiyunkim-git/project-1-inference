@@ -26,7 +26,7 @@ def main() -> None:
     with torch.no_grad():
         for index in range(1000):
             # Create an image that conforms to the Gaussian distribution.
-            fixed_noise = torch.randn([1, 100, 1, 1], device=device)
+            fixed_noise = torch.randn([1, 300, 1, 1], device=device)
             # fixed_noise = fixed_noise.half()
             image = generator(fixed_noise)
             torchvision.utils.save_image(image, os.path.join(exp_dir, f"{index:03d}.png"))

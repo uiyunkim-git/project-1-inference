@@ -44,7 +44,7 @@ class Generator(nn.Module):
         super(Generator, self).__init__()
         self.main = nn.Sequential(
             # Input is 100, going into a convolution.
-            nn.ConvTranspose2d(100, 512, (4, 4), (1, 1), (0, 0), bias=False),
+            nn.ConvTranspose2d(300, 512, (4, 4), (1, 1), (0, 0), bias=False),
             nn.BatchNorm2d(512),
             nn.ReLU(True),
             # state size. 512 x 4 x 4
